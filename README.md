@@ -1,4 +1,4 @@
-# Vesora — Custom WordPress & WooCommerce Theme
+# Vesora - Custom WordPress & WooCommerce Theme
 
 A custom classic WordPress theme for a premium Vietnamese hair showroom. WooCommerce powers a consultation-led product catalog, with WhatsApp and Instagram contact paths in place of public pricing and checkout.
 
