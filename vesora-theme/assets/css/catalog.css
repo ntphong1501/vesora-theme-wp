@@ -1,0 +1,117 @@
+/* Compact storefront rhythm, retaining Vesora's existing brand and typography. */
+.site-footer { padding-block: 32px 18px; }
+.site-footer__grid { grid-template-columns: minmax(260px, 1.25fr) repeat(3, minmax(0, 1fr)); gap: 24px; }
+.site-footer__brand { padding-right: 0; }
+.site-footer .brand--footer { margin-bottom: 18px; }
+.site-footer__logo { width: min(240px, 100%); }
+.site-footer__contact { gap: 10px; }
+.site-footer__contact li { gap: 9px; }
+.site-footer__contact p, .site-footer__contact a { font-size: 14px; line-height: 1.5; }
+.site-footer__socials { margin-top: 16px; gap: 8px; }
+.site-footer__socials a { width: 38px; height: 38px; }
+.site-footer__column { padding-left: 20px; }
+.site-footer h2 { margin-bottom: 8px; padding-bottom: 10px; font-size: 17px; }
+.site-footer__links a { min-height: 40px; padding-block: 8px; gap: 5px; font-size: 14px; line-height: 1.35; }
+.site-footer__bottom { margin-top: 24px; padding-top: 14px; }
+.site-footer__bottom p { font-size: 13px; }
+
+.woocommerce-shell { padding-block: 28px 36px; }
+.woocommerce .woocommerce-breadcrumb { margin-bottom: 12px; font-size: 14px; line-height: 1.5; }
+.vesora-catalog-heading h1 { margin: 0 0 20px; font-family: var(--font-display); font-size: clamp(28px, 3vw, 42px); line-height: 1.15; letter-spacing: -.02em; }
+.vesora-catalog-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
+.woocommerce .vesora-catalog-toolbar .woocommerce-result-count, .woocommerce .vesora-catalog-toolbar .woocommerce-ordering { float: none; margin: 0; }
+.woocommerce .vesora-ordering select { max-width: 100%; font: inherit; font-size: 14px; }
+.vesora-catalog-layout { display: grid; grid-template-columns: minmax(200px, 240px) minmax(0, 1fr); align-items: start; gap: 28px; }
+.vesora-catalog-results, .vesora-filters { min-width: 0; }
+.vesora-filters details { border-top: 1px solid var(--color-line-dark); }
+.vesora-filters summary { padding: 12px 0; font-weight: 600; cursor: pointer; }
+.vesora-filters fieldset { min-width: 0; margin: 16px 0 26px; padding: 0; border: 0; }
+.vesora-filters legend { float: none; width: 100%; margin-bottom: 14px; padding: 0; font-family: var(--font-display); font-size: 20px; line-height: 1.3; }
+.vesora-filter-options { display: grid; gap: 8px; }
+.vesora-filter-options--color { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.vesora-filter-options--length { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.vesora-filter-option { position: relative; cursor: pointer; min-width: 0; }
+.vesora-filter-option input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.vesora-filter-option__tile { display: flex; height: 100%; min-height: 42px; flex-direction: column; justify-content: center; align-items: center; padding: 4px; border: 1px solid #c7c9cc; border-radius: 7px; background: #fff; color: #252525; text-align: center; font-size: 12px; line-height: 1.3; }
+.vesora-filter-swatch { display: block; width: 100%; aspect-ratio: 1; overflow: hidden; border-radius: 4px; margin-bottom: 5px; }
+.vesora-filter-swatch img { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(2.6); transform-origin: 50% 65%; }
+.vesora-filter-option input:checked + .vesora-filter-option__tile { border: 2px solid #624329; padding: 3px; background: #f7f2ec; }
+.vesora-filter-option input:focus-visible + .vesora-filter-option__tile { outline: 2px solid #624329; outline-offset: 3px; }
+.vesora-filter-option:hover .vesora-filter-option__tile { border-color: #624329; }
+.vesora-filter-options--length .vesora-filter-option__tile { font-size: 13px; }
+.vesora-filter-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; }
+.woocommerce .vesora-filter-actions .button { padding: 12px 16px; border-radius: 4px; background: #171717; color: #fff; font-size: 13px; font-weight: 400; }
+.vesora-filter-empty { margin: 0; font-size: 13px; color: #666; }
+.vesora-catalog-results .product-category-banner { width: 100%; margin: 0 0 18px; }
+.vesora-catalog-results .product-category-banner img { display: block; width: 100%; height: auto; }
+.vesora-catalog-intro { font-size: 15px; line-height: 1.65; }
+.vesora-catalog-intro:empty { display: none; }
+.vesora-catalog-intro p { margin: 0 0 18px; }
+.vesora-catalog-results .showroom-category-nav { margin: 14px 0 22px; padding: 12px 0; }
+.vesora-catalog-results .showroom-category-nav p { margin-bottom: 8px; }
+.vesora-catalog-results .showroom-category-nav__links { gap: 6px; }
+.vesora-catalog-results .showroom-category-nav__links a { padding: 6px 10px; font-size: 12px; }
+.woocommerce .vesora-catalog-results ul.products { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 18px; overflow: visible; }
+.woocommerce .vesora-catalog-results ul.products li.product a img { aspect-ratio: 1; object-fit: contain; margin-bottom: 12px !important; }
+.woocommerce .vesora-catalog-results ul.products li.product .woocommerce-loop-product__title { font-family: var(--font-display); font-size: 19px !important; line-height: 1.3; }
+.vesora-catalog-results .showroom-card-meta { margin-top: 8px; font-size: 12px; }
+.woocommerce .vesora-catalog-results .showroom-contact .button { font-size: 12px; min-height: 38px; padding: 9px 10px !important; }
+
+body.single-product.woocommerce div.product { column-gap: 36px; row-gap: 32px; }
+body.single-product .woocommerce-shell { padding-top: 24px; }
+.woocommerce div.product .product_title { max-width: none; font-family: var(--font-display); font-size: clamp(26px, 2.7vw, 40px); line-height: 1.2; letter-spacing: -.02em; }
+.woocommerce-product-details__short-description { margin-top: 18px; font-size: 15px; line-height: 1.7; }
+.vesora-product-facts { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 10px 16px; margin: 20px 0; padding-block: 18px; border-block: 1px solid var(--color-line-dark); font-size: 14px; line-height: 1.6; }
+.vesora-product-facts dt { font-weight: 600; }
+.vesora-product-facts dd { margin: 0; }
+.woocommerce div.product .woocommerce-tabs .panel { max-width: none; font-size: 16px; line-height: 1.75; }
+.woocommerce div.product .woocommerce-tabs ul.tabs { margin-bottom: 20px; }
+.woocommerce div.product .woocommerce-tabs .panel > h2 { margin: 0 0 18px; font-size: 28px; }
+.vesora-catalog-editorial { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--color-line-dark); font-size: 16px; line-height: 1.75; }
+.vesora-catalog-editorial h2, .woocommerce .woocommerce-tabs .panel h2 { font-size: clamp(24px, 2.2vw, 32px); line-height: 1.3; }
+.vesora-catalog-editorial h3, .woocommerce .woocommerce-tabs .panel h3 { font-size: 22px; line-height: 1.35; }
+.vesora-catalog-editorial img, .woocommerce .woocommerce-tabs .panel img, .woocommerce-product-details__short-description img { max-width: 100%; height: auto; }
+.vesora-catalog-editorial table, .woocommerce .woocommerce-tabs .panel table, .woocommerce-product-details__short-description table { display: block; max-width: 100%; width: 100%; overflow-x: auto; border-collapse: collapse; margin-block: 20px; }
+.vesora-catalog-editorial th, .vesora-catalog-editorial td, .woocommerce .woocommerce-tabs .panel table th, .woocommerce .woocommerce-tabs .panel table td { padding: 12px 16px; border: 1px solid #ddd; text-align: left; min-width: 100px; }
+.vesora-catalog-editorial th, .woocommerce .woocommerce-tabs .panel table th { background: #f5f2ef; font-weight: 600; }
+.vesora-catalog-editorial a, .woocommerce .woocommerce-tabs .panel a { overflow-wrap: anywhere; }
+.vesora-catalog-editorial iframe, .woocommerce .woocommerce-tabs .panel iframe { max-width: 100%; }
+
+@media (min-width: 1440px) {
+  .woocommerce .vesora-catalog-results ul.products { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 1023px) {
+  .site-footer__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .site-footer__brand { grid-column: 1 / -1; padding: 0 0 18px; }
+  .site-footer__column { padding-left: 14px; }
+  .vesora-catalog-layout { grid-template-columns: 180px minmax(0, 1fr); gap: 20px; }
+  .vesora-filter-options--color { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .vesora-filter-options--length { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .woocommerce .vesora-catalog-results ul.products { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .site-footer { padding-block: 24px 16px; }
+  .site-footer__grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .site-footer__brand { grid-column: auto; padding-bottom: 20px; }
+  .site-footer .brand--footer { margin-bottom: 14px; }
+  .site-footer__logo { width: 210px; }
+  .site-footer__column { padding: 16px 0 0; }
+  .site-footer__column + .site-footer__column { margin-top: 16px; }
+  .site-footer h2 { margin-bottom: 4px; padding-bottom: 8px; }
+  .site-footer__links a { min-height: 44px; padding-block: 10px; }
+  .site-footer__bottom { margin-top: 20px; }
+  .woocommerce-shell { padding-block: 20px 28px; }
+  .vesora-catalog-heading h1 { margin-bottom: 14px; }
+  .vesora-catalog-toolbar { flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+  .vesora-catalog-layout { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .vesora-filters { border-bottom: 1px solid var(--color-line-dark); }
+  .vesora-filters fieldset { margin-block: 10px 20px; }
+  .vesora-filter-options--color { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .vesora-filter-options--length { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .vesora-filter-actions { margin-bottom: 16px; }
+  .woocommerce .vesora-catalog-results ul.products { gap: 22px 12px; }
+  .woocommerce .vesora-catalog-results ul.products li.product .woocommerce-loop-product__title { font-size: 17px !important; }
+  body.single-product.woocommerce div.product { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .woocommerce .vesora-catalog-results .showroom-contact .button { width: 100%; }
+  .vesora-catalog-editorial { margin-top: 24px; padding-top: 20px; }
+}

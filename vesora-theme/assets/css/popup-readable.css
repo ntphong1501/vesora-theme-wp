@@ -1,0 +1,44 @@
+/* Readability takes priority over squeezing the form into a short viewport. */
+body.offer-popup-is-open #ht-ctc-chat { visibility: hidden !important; }
+.offer-popup__header h2 {
+  font-size: clamp(1.75rem, 2.4vw, 2.5rem);
+  line-height: 1.18;
+  color: #795b2b;
+}
+.offer-popup__header { padding-right: 2.5rem; }
+.offer-popup__header p,
+.offer-popup__form label,
+.offer-popup__status { font-size: 1rem; line-height: 1.5; }
+.offer-popup__form input,
+.offer-popup__form select,
+.offer-popup__form textarea { font-size: 1.0625rem; line-height: 1.45; min-height: 2.75rem; }
+.offer-popup__form textarea { min-height: 5rem; }
+.offer-popup__form .field { gap: .3rem; }
+.offer-popup__status:empty { display: none; }
+.offer-popup__submit { font-size: 1.125rem; min-height: 2.875rem; line-height: 1.3; }
+.offer-popup__close { width: 2.75rem; height: 2.75rem; font-size: 2rem; }
+.offer-popup__content { min-height: 0; }
+@media (max-width: 960px) {
+  .offer-popup__dialog {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    max-height: calc(100dvh - 2rem);
+    overflow: hidden;
+  }
+  .offer-popup__visual { height: clamp(4.5rem, 12dvh, 6rem); }
+  .offer-popup__content { overflow-y: auto; overscroll-behavior: contain; padding: 1rem; }
+  .offer-popup__header h2 { font-size: 1.75rem; max-width: 100%; }
+  .offer-popup__header p { margin-top: .5rem; }
+  .offer-popup__form { gap: .65rem; }
+  .offer-popup__form input,
+  .offer-popup__form select,
+  .offer-popup__form textarea { font-size: 1rem; }
+}
+@media (max-width: 480px) {
+  .offer-popup__row--details { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 359px) {
+  .offer-popup__dialog { grid-template-rows: minmax(0, 1fr); }
+  .offer-popup__content { padding-top: 3.5rem; }
+}

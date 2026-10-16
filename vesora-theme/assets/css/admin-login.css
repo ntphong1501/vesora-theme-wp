@@ -1,0 +1,67 @@
+/* A branded shell around the unchanged WordPress login and recovery forms. */
+body.login { box-sizing: border-box; min-height: 100vh; min-height: 100dvh; height: auto; padding: 44px 6vw 32px calc(44% + 6vw); background: #f6f7f8; color: #292b30; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.login * { box-sizing: border-box; }
+.vesora-login-story { position: fixed; inset: 0 auto 0 0; display: flex; flex-direction: column; justify-content: space-between; width: 44%; padding: clamp(32px, 4.5vw, 72px); background: #28211c; color: #fff; }
+.vesora-login-story > a { display: block; width: min(240px, 100%); }
+.vesora-login-story img { display: block; width: 100%; height: auto; filter: brightness(0) invert(1); }
+.vesora-login-story > div { padding-block: 36px; }
+.vesora-login-eyebrow { margin: 0 0 18px; color: #d1b38b; font-size: 11px; font-weight: 600; letter-spacing: .16em; }
+.vesora-login-story h2 { margin: 0 0 22px; max-width: 540px; color: #fff; font-size: clamp(25px, 2.6vw, 42px); font-weight: 500; letter-spacing: -.025em; line-height: 1.3; }
+.vesora-login-story h2 + p { margin: 0; max-width: 420px; color: #d0c8c0; font-size: 15px; line-height: 1.8; }
+.vesora-login-story ul { margin: 28px 0 0; padding: 0; list-style: none; color: #e3dcd5; font-size: 13px; line-height: 1.7; }
+.vesora-login-story li { padding-block: 9px; border-bottom: 1px solid #ffffff1c; }
+.vesora-login-note { margin: 0; font-size: 11px; color: #bdb1a5; line-height: 1.7; }
+.login #login { width: 100%; max-width: 430px; margin: clamp(0px, 4vh, 48px) auto 0; padding: 0; }
+.login h1 a { width: 210px; height: 70px; margin: 0 0 28px; background-size: contain; background-position: left center; }
+.vesora-login-intro { margin-bottom: 24px; }
+.vesora-login-intro h2 { margin: 0 0 10px; font-size: 26px; line-height: 1.25; font-weight: 600; letter-spacing: -.025em; }
+.vesora-login-intro p { margin: 0; font-size: 14px; line-height: 1.7; color: #686c73; }
+.login form { margin: 0; padding: 26px; border: 1px solid #e0e2e6; border-radius: 10px; background: #fff; box-shadow: 0 4px 24px rgba(40,33,28,.04); overflow: visible; }
+.login label { margin-bottom: 8px; color: #393c41; font-size: 13px; font-weight: 500; }
+.login form .input, .login input[type=text], .login input[type=password] { min-height: 46px; margin: 0 0 20px; padding: 9px 12px; border: 1px solid #b9bec6; border-radius: 5px; font-size: 16px; line-height: 1.5; }
+.login .wp-pwd .input { padding-right: 46px; }
+.login input:focus { border-color: #735137; box-shadow: 0 0 0 2px #73513726; outline: 2px solid transparent; }
+.login .button.wp-hide-pw { min-width: 44px; min-height: 46px; color: #735137; }
+.login .button.wp-hide-pw:focus { border-color: #735137; box-shadow: none; outline: 2px solid #735137; outline-offset: -3px; }
+.login form .forgetmenot { float: none; margin-bottom: 20px; }
+.login form .forgetmenot label { font-size: 13px; }
+.login input[type=checkbox] { border-color: #9ba0a8; border-radius: 3px; }
+.login .submit .button-primary { float: none; display: block; width: 100%; min-height: 46px; padding: 10px 16px; border: 1px solid #735137; border-radius: 5px; background: #735137; color: #fff; font-size: 14px; font-weight: 600; line-height: 1.5; box-shadow: none; text-shadow: none; }
+.login .submit .button-primary:hover { background: #573b27; border-color: #573b27; }
+.login .submit .button-primary:focus { outline: 2px solid #735137; outline-offset: 3px; }
+.login .submit .button-primary:disabled { background: #e6e0da !important; color: #72685f !important; border-color: #d7cec5 !important; }
+.login #nav, .login #backtoblog { padding: 0; margin: 18px 0 0; font-size: 13px; }
+.login #nav a, .login #backtoblog a, .login .privacy-policy-page-link a { color: #735137; }
+.login a:focus-visible { outline: 2px solid #735137; outline-offset: 4px; box-shadow: none; }
+.login .message, .login .notice, .login #login_error { padding: 14px 16px; border-radius: 0 6px 6px 0; font-size: 13px; line-height: 1.6; }
+.login .language-switcher { margin: 24px auto 0; max-width: 430px; padding: 0; }
+.login .language-switcher form { padding: 0; border: 0; background: transparent; box-shadow: none; }
+.login .language-switcher select { max-width: 210px; }
+.login .privacy-policy-page-link { margin: 24px 0 0; }
+.login #pass-strength-result { margin: 0 0 16px; }
+.login .pw-weak { margin-bottom: 14px; }
+.login #reg_passmail { margin-bottom: 18px; line-height: 1.6; }
+@media (max-width: 960px) {
+  body.login { padding: 32px 20px; }
+  .vesora-login-story { display: none; }
+  .login #login { margin: 12px auto 0; }
+}
+@media (max-width: 480px) {
+  body.login { padding: 24px 16px; }
+  .login h1 a { width: 180px; height: 60px; margin-bottom: 22px; }
+  .vesora-login-intro h2 { font-size: 24px; }
+  .login form { padding: 22px 18px; }
+  .login .language-switcher select { max-width: 160px; }
+}
+@media (max-height: 650px) and (min-width: 961px) {
+  .vesora-login-story { overflow-y: auto; }
+  .vesora-login-story > div { padding-block: 22px; }
+  .vesora-login-story h2 { font-size: 28px; }
+  .vesora-login-story ul { margin-top: 18px; }
+  body.login { padding-top: 24px; }
+  .login #login { margin-top: 0; }
+}
+body.interim-login { padding: 20px; }
+.interim-login .vesora-login-story { display: none; }
+.interim-login #login { margin: 0 auto; }
+@media (prefers-reduced-motion: reduce) { .login #login { animation: none; } }

@@ -1,0 +1,103 @@
+/* Native WordPress navigation, forms, editors and notices stay functional. */
+body.vesora-admin { --vesora-accent: #735137; --vesora-admin-line: #e2e4e7; background: #f5f6f8; color: #23262b; }
+.vesora-admin #adminmenuback, .vesora-admin #adminmenuwrap, .vesora-admin #adminmenu { background: #24211f; }
+.vesora-admin #adminmenu .wp-submenu { background: #302c29; }
+.vesora-admin #adminmenu a { color: #e7e2dd; }
+.vesora-admin #adminmenu div.wp-menu-image:before { color: #bcb3ab; }
+.vesora-admin #adminmenu li.menu-top:hover, .vesora-admin #adminmenu li.opensub > a.menu-top, .vesora-admin #adminmenu li > a.menu-top:focus { background: #39322d; color: #fff; }
+.vesora-admin #adminmenu li:hover div.wp-menu-image:before, .vesora-admin #adminmenu li a:focus div.wp-menu-image:before { color: #f2d0a0; }
+.vesora-admin #adminmenu li.current a.menu-top, .vesora-admin #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu { background: #735137; color: #fff; }
+.vesora-admin #adminmenu .wp-submenu a:hover, .vesora-admin #adminmenu .wp-submenu a:focus { color: #fff; background: #453a32; }
+.vesora-admin #adminmenu .wp-submenu li.current a { color: #f2d0a0; }
+.vesora-admin #adminmenu a:focus { box-shadow: inset 3px 0 #efc68f; }
+.vesora-admin #adminmenu .awaiting-mod, .vesora-admin #adminmenu .update-plugins { background: #aa3e2c; color: #fff; }
+.vesora-admin #wpadminbar { background: #1d1b19; }
+.vesora-admin #wpadminbar .ab-top-menu > li:hover > .ab-item { background: #38312c; color: #f2d0a0; }
+.vesora-admin #wpbody-content > .wrap { margin-top: 24px; }
+.vesora-admin #wpbody-content > .wrap > h1 { font-size: 26px; font-weight: 600; color: #24211f; }
+.vesora-admin #wpbody-content > .wrap .button { border-radius: 5px; }
+.vesora-admin #wpbody-content > .wrap .button-primary { background: #735137; border-color: #735137; color: #fff; }
+.vesora-admin #wpbody-content > .wrap .button-primary:hover { background: #573b27; border-color: #573b27; }
+.vesora-admin #wpbody-content > .wrap .button-primary:focus { box-shadow: 0 0 0 1px #fff, 0 0 0 3px #735137; }
+.vesora-admin #wpbody-content > .wrap .wp-list-table { border-color: var(--vesora-admin-line); border-radius: 8px; box-shadow: none; }
+.vesora-admin #wpbody-content > .wrap .wp-list-table > thead > tr > th, .vesora-admin #wpbody-content > .wrap .wp-list-table > tfoot > tr > th { background: #f9fafb; }
+.vesora-admin #wpbody-content > .wrap .wp-list-table tbody td { padding-top: 12px; padding-bottom: 12px; }
+.vesora-admin #wpbody-content > .wrap .postbox { border-color: var(--vesora-admin-line); border-radius: 8px; box-shadow: 0 1px 2px rgba(25, 28, 33, .03); }
+.vesora-admin #wpbody-content > .wrap .postbox-header { border-bottom-color: var(--vesora-admin-line); }
+.vesora-admin #wpbody-content > .wrap input[type=text]:focus, .vesora-admin #wpbody-content > .wrap input[type=email]:focus, .vesora-admin #wpbody-content > .wrap textarea:focus { border-color: #735137; box-shadow: 0 0 0 1px #735137; }
+.vesora-admin #wpbody-content > .wrap .nav-tab { border-radius: 6px 6px 0 0; }
+.vesora-admin .notice { border-radius: 0 6px 6px 0; }
+.vesora-plugin-promotions { margin: 14px 20px 14px 0; padding: 10px 14px; border: 1px solid #e2e4e7; border-radius: 6px; background: #fff; }
+.vesora-plugin-promotions > summary { color: #656b73; font-size: 12px; cursor: pointer; }
+.vesora-plugin-promotions .gt-admin-notice { width: auto; max-width: 100%; box-sizing: border-box; margin-inline: 0; }
+/* Replace the generic welcome only; never hide security, error or plugin notices. */
+.vesora-admin.index-php #welcome-panel, .vesora-admin.index-php #wpbody-content > .wrap > h1 { display: none; }
+.vesora-workspace { max-width: 1440px; margin: 30px 20px 20px 0; }
+.vesora-workspace *, .vesora-workspace *::before, .vesora-workspace *::after { box-sizing: border-box; }
+.vesora-workspace a { color: #62432d; text-decoration: none; }
+.vesora-workspace a:hover { color: #3c281b; }
+.vesora-workspace a:focus-visible { outline: 2px solid #735137; outline-offset: 4px; box-shadow: none; }
+.vesora-workspace-heading { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 22px; }
+.vesora-workspace-brand { margin: 0 0 10px; font-size: 11px; font-weight: 650; letter-spacing: .14em; color: #735137; }
+.vesora-workspace h1 { margin: 0 0 10px; padding: 0; color: #24211f; font-size: clamp(25px, 2.5vw, 34px); font-weight: 600; line-height: 1.25; }
+.vesora-workspace-heading p:last-child { margin: 0; color: #656b73; font-size: 14px; }
+.vesora-workspace .button { display: inline-flex; justify-content: center; align-items: center; gap: 8px; min-height: 40px; padding: 8px 16px; border-radius: 6px; border: 1px solid #ccd0d5; background: #fff; color: #292b30; font-size: 13px; line-height: 1.4; white-space: normal; text-align: center; }
+.vesora-workspace .button:hover { border-color: #735137; color: #62432d; }
+.vesora-workspace .button-primary { background: #735137; border-color: #735137; color: #fff; }
+.vesora-workspace .button-primary:hover { background: #573b27; color: #fff; }
+.vesora-workspace .dashicons { flex-shrink: 0; }
+.vesora-workspace-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 26px; }
+.vesora-workspace-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-bottom: 32px; }
+.vesora-workspace-metrics > a { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding: 20px; background: #fff; border: 1px solid var(--vesora-admin-line); border-radius: 8px; color: #353a40; }
+.vesora-workspace-metrics > a:hover { border-color: #b89c85; }
+.vesora-workspace-metrics > a > span { font-size: 13px; }
+.vesora-workspace-metrics strong { font-size: 32px; font-weight: 600; line-height: 1.15; color: #24211f; }
+.vesora-workspace-metrics small { font-size: 12px; color: #735137; }
+.vesora-workspace-section { margin-bottom: 28px; }
+.vesora-workspace-section > h2 { margin: 0 0 14px; font-size: 18px; line-height: 1.4; }
+.vesora-workspace-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.vesora-workspace-links > a { display: flex; align-items: flex-start; gap: 14px; padding: 20px; background: #fff; border: 1px solid var(--vesora-admin-line); border-radius: 8px; color: #292b30; }
+.vesora-workspace-links > a:hover { border-color: #b89c85; background: #fdfbf8; }
+.vesora-workspace-links > a > .dashicons { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 8px; background: #f5f0e9; color: #735137; font-size: 21px; }
+.vesora-workspace-links h3 { margin: 0 0 6px; font-size: 15px; line-height: 1.4; }
+.vesora-workspace-links p { margin: 0; color: #656b73; font-size: 13px; line-height: 1.6; }
+.vesora-link-arrow { margin-left: auto; color: #877260; }
+.vesora-workspace-recent { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.vesora-workspace-panel { min-width: 0; padding: 20px; border: 1px solid var(--vesora-admin-line); border-radius: 8px; background: #fff; }
+.vesora-workspace-recent > :only-child { grid-column: 1 / -1; }
+.vesora-workspace-panel header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--vesora-admin-line); }
+.vesora-workspace-panel h2 { margin: 0; font-size: 16px; line-height: 1.4; }
+.vesora-workspace-panel header > a { flex-shrink: 0; font-size: 12px; }
+.vesora-recent-list { margin: 0; }
+.vesora-recent-list li { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 0; padding: 14px 0; border-bottom: 1px solid #eff0f2; }
+.vesora-recent-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.vesora-recent-list li > div { min-width: 0; }
+.vesora-recent-list li > div > a { display: block; font-size: 13px; font-weight: 600; line-height: 1.5; overflow-wrap: anywhere; }
+.vesora-recent-list li > div > span { display: block; margin-top: 4px; font-size: 12px; color: #727780; }
+.vesora-status { flex-shrink: 0; padding: 4px 7px; border-radius: 4px; background: #f1f2f4; color: #5b6066; font-size: 11px; }
+.vesora-status--publish { background: #edf6f0; color: #326144; }
+.vesora-status--pending, .vesora-status--draft { background: #fbf3e7; color: #805a27; }
+.vesora-workspace-empty { margin-bottom: 0; color: #656b73; line-height: 1.7; }
+.vesora-workspace-guide { display: flex; gap: 12px; margin-top: 24px; padding: 18px 20px; border: 1px solid #dce2e8; border-radius: 8px; background: #edf1f5; color: #515c68; }
+.vesora-workspace-guide h2 { margin: 0 0 6px; font-size: 14px; }
+.vesora-workspace-guide p { margin: 0 0 8px; font-size: 13px; line-height: 1.7; }
+.vesora-workspace-guide a { font-size: 13px; text-decoration: underline; }
+@media (min-width: 1100px) {
+  .vesora-admin:not(.folded) #adminmenu .wp-menu-name { padding-block: 10px; }
+  .vesora-admin:not(.folded) #adminmenu .wp-menu-image { padding-top: 3px; }
+}
+@media (max-width: 1200px) {
+  .vesora-workspace-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .vesora-workspace-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 782px) {
+  .vesora-workspace { margin: 22px 12px 20px 0; }
+  .vesora-workspace-heading { align-items: flex-start; flex-direction: column; gap: 16px; }
+  .vesora-workspace-links, .vesora-workspace-recent { grid-template-columns: minmax(0, 1fr); }
+  .vesora-workspace-links > a { padding: 16px; }
+  .vesora-workspace-metrics { gap: 10px; margin-bottom: 24px; }
+  .vesora-workspace-metrics > a { padding: 14px; }
+  .vesora-workspace-metrics strong { font-size: 28px; }
+  .vesora-workspace .button { min-height: 44px; }
+  .vesora-workspace-panel { padding: 16px; }
+}

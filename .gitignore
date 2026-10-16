@@ -1,0 +1,15 @@
+/*
+!/.gitignore
+!/README.md
+!/vesora-theme/
+**/.env
+**/.env.*
+**/.htpasswd
+**/node_modules/
+**/.wrangler/
+**/__pycache__/
+**/*.log
+**/.DS_Store
+**/Thumbs.db
+/vesora-theme/assets/images/functions.php
+

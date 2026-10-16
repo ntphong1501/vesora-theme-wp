@@ -1,0 +1,39 @@
+/* Source: supplied vesora-loader-4, Coming Together. Scoped to avoid theme clashes.
+   Layer 100010 is above the existing offer dialog (100000). */
+.vesora-loading {
+  --ink: #35232b;
+  --panel: #fffdf9;
+  --cycle: 2.8s;
+  position: fixed;
+  inset: 0;
+  z-index: 100010;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 24px;
+  background: var(--panel);
+  color: var(--ink);
+}
+.vesora-loading[hidden] { display: none !important; }
+body:has(.vesora-loading:not([hidden])) #ht-ctc-chat { visibility: hidden !important; }
+.vesora-loading__brand { display: flex; flex-direction: column; align-items: center; gap: 18px; width: min(320px, 85vw); }
+.vesora-loading .full-logo { display: block; fill: currentColor; width: 100%; height: auto; overflow: visible; }
+.vesora-loading .arrive-icon,
+.vesora-loading .arrive-word,
+.vesora-loading .arrive-tag { transform-box: fill-box; transform-origin: center; animation: vesora-arrive var(--cycle) ease-in-out infinite; }
+.vesora-loading .arrive-icon { --x: -60px; --y: 0px; }
+.vesora-loading .arrive-word { --x: 60px; --y: 0px; animation-delay: .12s; }
+.vesora-loading .arrive-tag { --x: 0px; --y: 30px; animation-delay: .24s; }
+@keyframes vesora-arrive {
+  0%, 100% { opacity: 0; transform: translate(var(--x), var(--y)); }
+  25%, 72% { opacity: 1; transform: translate(0, 0); }
+}
+.vesora-loading__track { width: 180px; max-width: 70%; height: 6px; background: #e9e0d8; overflow: hidden; border-radius: 6px; }
+.vesora-loading__track span { display: block; width: 40%; height: 100%; border-radius: inherit; background: var(--ink); animation: vesora-travel var(--cycle) ease-in-out infinite; }
+@keyframes vesora-travel { from { transform: translateX(-110%); } to { transform: translateX(360%); } }
+.vesora-loading__label { margin: 0; color: #51464a; font: 16px/1.5 Arial, sans-serif; text-align: center; }
+@media (prefers-reduced-motion: reduce) {
+  .vesora-loading *, .vesora-loading *::before, .vesora-loading *::after { animation: none !important; transform: none !important; opacity: 1; }
+}
